@@ -26,6 +26,8 @@
 ## To Do ##
 
 * Mockups 
+* Vaadin sample setup (along with Jetty server)
+* REST API (?)
 
 ## Knowledge Base ##
 
