@@ -1,0 +1,4 @@
+DB_NAME = 'eutest'
+MEPS_COLLECTION = 'meps'
+VOTES_COLLECTION = 'votes'
+TWITTERS_COLLECTION = 'twitters'
