@@ -10,7 +10,7 @@
 
 	<parent>
 		<groupId>com.codejoy</groupId>
-		<artifactId>euhachathon2014</artifactId>
+		<artifactId>euhackathon2014</artifactId>
 		<version>1.0</version>
 	</parent>
 
