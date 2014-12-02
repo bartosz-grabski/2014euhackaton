@@ -9,7 +9,8 @@
 	<name>Vaadin Web Application</name>
 
 	<parent>
-		<artifactId>euhachathon2014<artifactId>
+		<groupId>com.codejoy</groupId>
+		<artifactId>euhachathon2014</artifactId>
 		<version>1.0</version>
 	</parent>
 
