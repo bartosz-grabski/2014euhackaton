@@ -1,0 +1,1 @@
+var Mep = mongoose.model('Mep', { name: String });

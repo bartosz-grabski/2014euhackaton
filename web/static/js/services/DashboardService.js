@@ -1,6 +1,6 @@
-services.factory('DashboardService', function ($http,$location,$window,$rootScope) {
+services.factory('dashboardService', function ($http,$location,$window,$rootScope) {
 
-	
+	var service = {};
 
 	return service;
 });

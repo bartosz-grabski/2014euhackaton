@@ -3,12 +3,9 @@ var express = require('express');
 var routes = require('./routes');
 var http = require('http');
 var path = require('path');
-var mongoose = require('mongoose');
-
 var app = express();
 
-// all environments
-//app.use(express.compress());
+
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.html', require('ejs').renderFile);
@@ -30,8 +27,12 @@ http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
 
-mongoose.connect('mongodb://' + dbConfig["dbHost"] + ":" + dbConfig["dbPort"] + "/" + dbConfig["dbDatabase"]);
 
 app.get('/',routes.index);
 app.get('/views/home', routes.home);
 app.get('/views/dashboard', routes.dashboard);
+
+// REST API 
+
+app.get('/members', routes.members);
+app.get('/member/:id', routes.member);
