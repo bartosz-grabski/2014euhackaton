@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/dashboard.css" >
+<link rel="stylesheet" href="css/spinner.css" >
 </head>
 
 <body>
@@ -16,25 +17,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">GovernMeter</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+          
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
 	<div ng-view></div>
-
-	<div class="footer">Copyright - Bartosz Grabski, Mateusz Antkiewicz</div>
 </div>
 </body>
 
@@ -47,6 +38,7 @@
 
 <script src="js/services/services.js"></script>
 <script src="js/services/DashboardService.js"></script>
+<script src="js/services/MemberService.js"></script>
 
 <script src="js/controllers/controllers.js"></script>
 <script src="js/controllers/DashboardController.js"></script>

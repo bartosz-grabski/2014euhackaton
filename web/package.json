@@ -11,7 +11,8 @@
     "ejs": "*",
     "nodemailer": "0.7.1",
     "email-templates": "*",
-    "rand-token": "*"
+    "rand-token": "*",
+    "mongodb":"*"
   },
   "devDependencies": {
     "grunt": "~0.4.4",

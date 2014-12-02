@@ -4,8 +4,8 @@ var app = angular.module('app', ['ui.bootstrap', 'ngRoute', 'geopoll.controllers
 app.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-            when('/dashboard', {
-                templateUrl: '/views/dashboard',
+            when('/dashboard/:id', {
+                templateUrl: '/views/dashboard/',
                 controller: 'DashboardController'
             }).
             otherwise({  
