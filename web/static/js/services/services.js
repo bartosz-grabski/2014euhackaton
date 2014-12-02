@@ -1,1 +1,1 @@
-var services = angular.module('geopoll.services', []);
+var services = angular.module('services', []);

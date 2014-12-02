@@ -1,1 +1,1 @@
-var controllers = angular.module('geopoll.controllers', ['geopoll.services', 'ui.bootstrap']);
+var controllers = angular.module('controllers', ['services', 'ui.bootstrap', 'directives']);
