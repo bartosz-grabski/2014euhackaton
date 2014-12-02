@@ -43,19 +43,19 @@ db = conn[DB_NAME]
 meps_collection = db[MEPS_COLLECTION]
 
 for mep in meps_collection.find():
-    if 'twitter' in mep:
-        twitter = mep['twitter']
+    if not mep['twitter']:
+        continue
 
-        twitters_collection = db[TWITTERS_COLLECTION]
-        tweets = [{'created_at': a.created_at, 'text': a.text} for a in api.GetUserTimeline(twitter, count=200)]
-        twitters_collection.insert(
-            {"mepid": mep['mepinfo']['mepid'],
-             "tweets": tweets})
+    twitter = mep['twitter']
+    mepid = mep['mepinfo']['mepid']
 
-        time.sleep(20)
+    twitters_collection = db[TWITTERS_COLLECTION]
+    tweets = [{'created_at': a.created_at, 'text': a.text} for a in api.GetUserTimeline(twitter, count=200)]
+    twitters_collection.insert({'mepid': mepid, 'tweets': tweets})
+
+    time.sleep(14)
 
 conn.close()
-#
 
 
 
