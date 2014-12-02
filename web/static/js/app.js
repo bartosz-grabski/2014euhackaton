@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.bootstrap', 'ngRoute', 'geopoll.controllers', 'geopoll.services']);
+var app = angular.module('app', ['ui.bootstrap', 'ngRoute', 'controllers', 'services', 'directives']);
 
 
 app.config(['$routeProvider',

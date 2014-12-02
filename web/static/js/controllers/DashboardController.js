@@ -2,7 +2,7 @@ controllers.controller('DashboardController', function ($scope, $rootScope, $loc
 
 	$scope.mep = { mepinfo : {} };
 	$scope.loaded = {
-		appearances = false;
+		appearances : false
 	};
 
 	function onMemberLoaded(data) {
@@ -14,8 +14,5 @@ controllers.controller('DashboardController', function ($scope, $rootScope, $loc
     }
 
 	memberService.getMember($routeParams.id,onMemberLoaded,onMemberLoadingError);
-
-
-	function loadAppea
 
 });
