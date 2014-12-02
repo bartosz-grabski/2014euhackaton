@@ -1,8 +1,8 @@
-controllers.controller('DashboardController', function ($scope, $rootScope, $location, $routeParams, memberService) {
+controllers.controller('DashboardController', function ($window,$document,$scope, $rootScope, $location, $routeParams, memberService) {
 
 	$scope.mep = { mepinfo : {} };
 	$scope.loaded = {
-		appearances : false
+		appearances : false,
 	};
 
 	function onMemberLoaded(data) {
@@ -15,4 +15,6 @@ controllers.controller('DashboardController', function ($scope, $rootScope, $loc
 
 	memberService.getMember($routeParams.id,onMemberLoaded,onMemberLoadingError);
 
+
+	
 });
