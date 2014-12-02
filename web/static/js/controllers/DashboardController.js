@@ -9,7 +9,7 @@ controllers.controller('DashboardController', function ($window,$document,$scope
     	$scope.mep = data
     }
 	function onVotesLoaded(data) {
-    	$scope.votes = data.value.votes
+    	$scope.votes = data.value.votes;
     }
 
     function onLoadingError(error) {
