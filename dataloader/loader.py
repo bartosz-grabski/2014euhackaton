@@ -25,10 +25,14 @@ def store(data, db_name, collection_name):
         if conn:
             conn.close()
 
+
 print 'Fetching meps'
 store([c for c in load_converted(IypMepsLoader(), XmlToDictConverter())], DB_NAME, MEPS_COLLECTION)
 print 'done'
-print 'Fetching votes'
-for c in load_converted(IypVotesLoader(), XmlToDictConverter()):
-    store(c, DB_NAME, VOTES_COLLECTION)
-print 'done'
+# print 'Fetching votes'
+# i = 0
+# for c in load_converted(IypVotesLoader(), XmlToDictConverter()):
+#     store(c, DB_NAME, VOTES_COLLECTION)
+#     i += 1
+#     print i
+# print 'done'
