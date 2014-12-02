@@ -12,7 +12,7 @@ local.properties
 .loadpath
 .project
 
-VAADIN/
+widgetsets/
 
 # External tool builders
 .externalToolBuilders/
