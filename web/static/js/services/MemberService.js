@@ -14,5 +14,11 @@ services.factory('memberService', function ($http,$location,$window,$rootScope) 
 			.error(onFailure)
 	}
 
+	service.getVotes = function(id, onSuccess, onFailure) {
+		$http.get('/votes/'+id)
+			.success(onSuccess)
+			.error(onFailure)
+	}
+
 	return service;
 });

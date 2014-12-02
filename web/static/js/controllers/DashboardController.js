@@ -8,11 +8,14 @@ controllers.controller('DashboardController', function ($scope, $rootScope, $loc
 	function onMemberLoaded(data) {
     	$scope.mep = data
     }
+	function onVotesLoaded(data) {
+    	$scope.votes = data.value.votes
+    }
 
-    function onMemberLoadingError(error) {
+    function onLoadingError(error) {
     	console.log("error loading " + error);
     }
 
-	memberService.getMember($routeParams.id,onMemberLoaded,onMemberLoadingError);
-
+	memberService.getMember($routeParams.id,onMemberLoaded,onLoadingError);
+	memberService.getVotes($routeParams.id,onVotesLoaded,onLoadingError);
 });
