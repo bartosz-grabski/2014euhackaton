@@ -9,11 +9,10 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">{{mep.mepinfo.fullname}}</h1>
-
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-4 placeholder">
+            <div class="col-xs-4 col-sm-4 placeholder">
               <div class="panel panel-default">
-                  <div class="panel-body" style="height:100px">
+                  <div class="panel-body" style="height:75px">
                       <h1 ng-style="mep.mepinfo.attendance < 10 ? { color:'red'} : {color:'green'}">{{mep.mepinfo.attendance}}</h1>
                   </div>
                   <h4 style="margin-bottom:25px">Attendance</h4>
@@ -22,61 +21,52 @@
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
               <div class="panel panel-default">
-                  <div class="panel-body" style="height:100px">
-
+                  <div class="panel-body" style="height:75px">
+                    <h1>10</h1>
                   </div>
-                  <h4 style="margin-bottom:25px">Disobedience</h4>
+                    <h4 style="margin-bottom:25px">Appearances</h4>
               </div>
-              
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
               <div class="panel panel-default">
-                  <div class="panel-body" style="height:100px">
-						<h1>{{votes}}</h1>
+                  <div class="panel-body" style="height:75px">
+                    <h1>{{votes}}</h1>
                   </div>
-                  <h4 style="margin-bottom:25px">Votes</h4>
+                    <h4 style="margin-bottom:25px">Votes</h4>
               </div>
-              
             </div>
-          </div>
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-5 placeholder" >
+            <div class="col-xs-6 col-sm-6 placeholder">
               <div class="panel panel-default">
+                  <div class="panel-body" style="height:425px">
+                    <div ng-chart id="container" style="min-width: 310px; height: 400px; max-width: 600px"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <div ng-show="mep.twitter" class="panel panel-default">
+                  <div class="panel-body" style="height:425px">
+                    <a height="410px" class="twitter-timeline" data-screen-name="{{mep.twitter}}"
+ data-dnt="true" data-widget-id="539839110543065088">Tweets by @{{mep.twitter}}</a>
+                    <div ng-twitter style="height:300px" ></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 placeholder" >
+              <div class="panel panel-default">
+                   <h4>Tags</h4>
                   <div class="panel-body">
                   <div ng-tag-cloud style="height:250px height:200px"></div>
                   </div>
-                  <h4 style="margin-bottom:25px">Tag cloud</h4>
               </div>
-              
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
+            <div class="col-xs-6 col-sm-8 placeholder">
               <div class="panel panel-default">
+                  <h4>Speeches</h4>
                   <div class="panel-body" style="height:250px">
-
+                      ToDo
                   </div>
-                  <h4 style="margin-bottom:25px">Disobedience</h4>
               </div>
-              
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <div class="panel panel-default">
-                  <div class="panel-body" style="height:250px">
-
-                  </div>
-                  <h4 style="margin-bottom:25px">Votes</h4>
-              </div>
-              
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <div class="panel panel-default">
-                  <div class="panel-body" style="height:250px">
-
-                  </div>
-                  <h4 style="margin-bottom:25px">Tag cloud</h4>
-              </div>
-              
-            </div>
-            <div ng-chart id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
           </div>
       </div>
     </div>

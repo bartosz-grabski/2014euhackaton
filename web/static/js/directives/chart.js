@@ -4,14 +4,14 @@ directives.directive('ngChart', function($location,$document,$window) {
  		
  		
 		$(function () {
-    $("#container").highcharts({
+    $(element[0]).highcharts({
         chart: {
             plotBackgroundColor: null,
-            plotBorderWidth: 1,//null,
+            plotBorderWidth: 0,//null,
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'Party line'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -31,19 +31,10 @@ directives.directive('ngChart', function($location,$document,$window) {
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'Votes',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
+                { name :'Disobedient', color:'red', y:5.0},
+                { name :'In line', color:'green',y: 95.0 }
             ]
         }]
     });
