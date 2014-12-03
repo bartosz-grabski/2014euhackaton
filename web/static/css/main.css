@@ -133,7 +133,15 @@ input.rounded:focus {
   border-color: #339933;
 }
 
+
 .mepinfo:hover .panel-body {
 	background-color: rgb(247,247,249) !important;
 	transition: background-color 0.5s;
+
+.panel {
+  border-radius:                    0px;
+  -webkit-border-radius:            0px;
+  -moz-border-radius:               0px;
+  border: 0px;
+  box-shadow: hsla(0, 0%, 0%, 0.0) 0px 0px 0px 0px !important;
 }
