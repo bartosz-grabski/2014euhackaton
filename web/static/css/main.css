@@ -104,3 +104,31 @@ body {
 .resize-helper {
     border: 1px dashed darkred;
 }
+
+.panel:hover {
+    cursor:pointer;
+}
+
+.panel:hover > .panel-heading {
+    background-image:linear-gradient(to bottom,#DB730D 0,#FF9100 100%);
+}
+
+input.rounded {
+  border: 1px solid #ccc;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 2px 2px 3px #666;
+  -webkit-box-shadow: 2px 2px 3px #666;
+  box-shadow: 2px 2px 3px #666;
+  font-size: 20px;
+  padding: 4px 7px;
+  outline: 0;
+  -webkit-appearance: none;
+  width:600px;
+  height:50px;
+  margin:auto;
+}
+input.rounded:focus {
+  border-color: #339933;
+}

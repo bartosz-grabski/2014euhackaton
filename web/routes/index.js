@@ -100,9 +100,10 @@ var votes = function (req, res) {
 		} else {
 			res.send(docs[0]);
 		}
-	});	
-}
+	});
 
+}
+	
 
 module.exports = {
     index: index,
