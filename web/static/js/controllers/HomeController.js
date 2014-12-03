@@ -2,6 +2,7 @@ controllers.controller('HomeController', function ($scope, $rootScope, $location
 
     var meps = [];
     $scope.meps = [];
+    $scope.loaded = false;
     $scope.input = "";
 
     $scope.filter = function() {
@@ -36,6 +37,7 @@ controllers.controller('HomeController', function ($scope, $rootScope, $location
     function onMembersLoaded(data) {
     	meps = data;
         $scope.meps = meps;
+        $scope.loaded = true;
     }
 
     function onMembersLoadingError(error) {
