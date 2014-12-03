@@ -37,3 +37,4 @@ app.get('/views/dashboard', routes.dashboard);
 app.get('/members', routes.members);
 app.get('/member/:id', routes.member);
 app.get('/votes/:id', routes.votes);
+app.get('/disobedience/:id', routes.disobedience);
