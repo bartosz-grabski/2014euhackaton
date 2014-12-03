@@ -9,8 +9,12 @@
         
       </div>
     </div>
-
     <div class="container">
+            <div ng-show="meps.length == 0" class="row row-centered">
+              <div class="col-md-12" style="text-align:center">
+                <div class="three-quarters">Loading ...</div>
+              </div>
+            </div>
             <div class="col-md-6" ng-repeat="mep in meps" ng-show="calcShow(mep)">
               <div class="mepinfo" style="height:340px; max-height:340px" ng-click="showMepDashboard(mep.mepinfo.mepid)">
                   <h3 style="padding: 16px; 10px; background-color: rgb(247,247,249); color: #444 !important; font-weight:bold; margin-bottom: 0px">
