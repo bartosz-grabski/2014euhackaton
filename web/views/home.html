@@ -1,9 +1,9 @@
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+﻿    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <div class="form-group has-feedback">
     <label class="control-label">Find your Member of European Parliament</label>
-    <input type="text" class="form-control" placeholder="Enter name/surname" ng-model="input" ng-change="filter()"></input>
+    <input type="text" class="form-control" placeholder="Search for MEP" ng-model="input" ng-change="filter()"></input>
     <i class="glyphicon glyphicon-search form-control-feedback"></i>
 </div>
         
@@ -11,24 +11,23 @@
     </div>
 
     <div class="container">
-      <h2 class="sub-header">Members of parliament</h2>
             <div class="col-md-6" ng-repeat="mep in meps" ng-show="calcShow(mep)">
-              <div class="panel panel-default" style="height:340px" ng-click="showMepDashboard(mep.mepinfo.mepid)">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
+              <div class="mepinfo" style="height:340px; max-height:340px" ng-click="showMepDashboard(mep.mepinfo.mepid)">
+                  <h3 style="padding: 16px; 10px; background-color: rgb(247,247,249); color: #444 !important; font-weight:bold; margin-bottom: 0px">
                     {{mep.mepinfo.fullname}}
                   </h3>
-                </div>
-                <div class="panel-body">
+                <div class="panel-body" style="padding-top: 13px;">
                   <img ng-src="http://itsyourparliament.eu/img/meps/{{mep.mepinfo.mepid}}.jpg" class="img-responsive center-block" alt="{{mep.mepinfo.fullname}}"/>
-                  <ul class="list-group" style="margin-top:5px">
-                    <li class="list-group-item">Country : {{mep.mepinfo.country}}</li>
-                    <li class="list-group-item">Party: {{mep.mepinfo.group}}</li>
-                  </ul>
                 </div>
+				<ul style="margin-top:0px; border-width: 0px !important; box-shadow: rgb(0, 0, 0) 0px;list-style-type:none; background-color: rgb(247,247,249); padding: 10px; min-width: 324px;">
+                    <li style="display: inline; margin-right: 15px">
+					<span class="glyphicon glyphicon glyphicon-home" style="padding-right: 10px" aria-hidden="true"></span>{{mep.mepinfo.country}}
+					</li>
+					<li style="display: inline">
+					<span class="glyphicon glyphicon-heart-empty" style="padding-right: 10px"  aria-hidden="true"></span>{{mep.mepinfo.group}}
+					</li>
+                  </ul>
               </div>
             </div>
           </div>
-      </div>
-    </div>
 

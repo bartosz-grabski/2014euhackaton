@@ -132,3 +132,8 @@ input.rounded {
 input.rounded:focus {
   border-color: #339933;
 }
+
+.mepinfo:hover .panel-body {
+	background-color: rgb(247,247,249) !important;
+	transition: background-color 0.5s;
+}
