@@ -178,9 +178,10 @@ var votes = function (req, res) {
 				res.send(0);
 			}
 		}
-	});	
-}
+	});
 
+}
+	
 
 module.exports = {
     index: index,

@@ -16,7 +16,7 @@ directives.directive('ngTagCloud', function($location,$document,$window) {
 
         function setCss() {
         	
-        	var width = element.parent()[0].offsetWidth - 30;
+        	var width = element.parent()[0].clientWidth - 25;
  			var height = Math.floor(width * 0.66);
 
  			element.css('width',width+"px");

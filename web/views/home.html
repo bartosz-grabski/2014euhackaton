@@ -1,17 +1,19 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <div class="form-group has-feedback">
+    <label class="control-label">Find your Member of European Parliament</label>
+    <input type="text" class="form-control" placeholder="Enter name/surname" ng-model="input" ng-change="filter()"></input>
+    <i class="glyphicon glyphicon-search form-control-feedback"></i>
+</div>
+        
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
       <h2 class="sub-header">Members of parliament</h2>
-            <div class="col-md-6" ng-repeat="mep in meps">
-              <div class="panel panel-default">
+            <div class="col-md-6" ng-repeat="mep in meps" ng-show="calcShow(mep)">
+              <div class="panel panel-default" style="height:340px" ng-click="showMepDashboard(mep.mepinfo.mepid)">
                 <div class="panel-heading">
                   <h3 class="panel-title">
                     {{mep.mepinfo.fullname}}
@@ -19,16 +21,14 @@
                 </div>
                 <div class="panel-body">
                   <img ng-src="http://itsyourparliament.eu/img/meps/{{mep.mepinfo.mepid}}.jpg" class="img-responsive center-block" alt="{{mep.mepinfo.fullname}}"/>
-                  <ul class="list-group" style="margin-top:10px">
+                  <ul class="list-group" style="margin-top:5px">
                     <li class="list-group-item">Country : {{mep.mepinfo.country}}</li>
                     <li class="list-group-item">Party: {{mep.mepinfo.group}}</li>
                   </ul>
-                  <span class="glyphicon glyphicon-user" ng-click="showMepDashboard(mep.mepinfo.mepid)"></span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
 
